@@ -3,5 +3,6 @@ class HomepageController < ApplicationController
 
   def index
     @user_info = current_user
+    @top_keywords = top_keywords
   end
 end

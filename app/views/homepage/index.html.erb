@@ -1,1 +1,8 @@
-Hello! <%= @user_info['name'] %>
+Hello! <%= session[:user_info][:name] %>
+
+<p>Here are all your top facebook status keywords: </p>
+<ul>
+  <% @top_keywords.each do |word| %>
+    <li><%= word[0]  %> -- <%= word[1]  %> times.</li>
+  <% end %>
+</ul>
